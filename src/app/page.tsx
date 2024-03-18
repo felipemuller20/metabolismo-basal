@@ -4,14 +4,15 @@ import { useState } from "react";
 
 export default function Home() {
   const [gender, setGender] = useState<"male" | "female">("male");
-  const [height, setHeight] = useState<number>(0);
-  const [weight, setWeight] = useState<number>(0);
-  const [age, setAge] = useState<number>(0);
+  const [height, setHeight] = useState<number>();
+  const [weight, setWeight] = useState<number>();
+  const [age, setAge] = useState<number>();
   const [result, setResult] = useState<number>(0);
   function handleClick(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
     event?.preventDefault();
 
     let formResult;
+    if (!height || !weight || !age) return;
     if (gender === "male") {
       formResult = 66 + 13.7 * weight + 5 * height - 6.8 * age;
       setResult(formResult);
@@ -119,7 +120,7 @@ export default function Home() {
           <button
             onClick={handleClick}
             className="rounded-lg border border-neutral-700 disabled:border-red-400 hover:bg-neutral-300 disabled:hover:bg-red-200 text-gray-900 text-sm w-fit px-5 py-3"
-            disabled={height <= 0 || weight <= 0 || age <= 0}
+            disabled={!height || !weight || !age}
           >
             Calcular
           </button>
