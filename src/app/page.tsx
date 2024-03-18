@@ -42,7 +42,7 @@ export default function Home() {
           <label>
             Sexo
             <section className="flex justify-normal md:gap-10 gap-4 text-neutral-800">
-              <div className="flex gap-1">
+              <div className="flex gap-1 items-center">
                 <input
                   type="radio"
                   id="male"
@@ -53,7 +53,7 @@ export default function Home() {
                 />
                 <label htmlFor="male">Masculino</label>
               </div>
-              <div className="flex gap-1">
+              <div className="flex gap-1 items-center">
                 <input
                   type="radio"
                   id="female"
