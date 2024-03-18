@@ -75,12 +75,7 @@ export default function Home() {
                   type="number"
                   value={height}
                   className="p-2 rounded border border-neutral-400 w-20"
-                  onChange={(event) => {
-                    const value = Number(event.target.value);
-                    if (value >= 0) {
-                      setHeight(value);
-                    }
-                  }}
+                  onChange={(event) => setHeight(Number(event.target.value))}
                 />
               </section>
             </label>
@@ -91,12 +86,7 @@ export default function Home() {
                   type="number"
                   value={weight}
                   className="p-2 rounded border border-neutral-400 w-20"
-                  onChange={(event) => {
-                    const value = Number(event.target.value);
-                    if (value >= 0) {
-                      setWeight(value);
-                    }
-                  }}
+                  onChange={(event) => setWeight(Number(event.target.value))}
                 />
               </section>
             </label>
@@ -107,12 +97,7 @@ export default function Home() {
                   type="number"
                   value={age}
                   className="p-2 rounded border border-neutral-400 w-20"
-                  onChange={(event) => {
-                    const value = Number(event.target.value);
-                    if (value >= 0) {
-                      setAge(value);
-                    }
-                  }}
+                  onChange={(event) => setAge(Number(event.target.value))}
                 />
               </section>
             </label>
